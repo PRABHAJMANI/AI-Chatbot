@@ -1,0 +1,86 @@
+/* MeetingView.css */
+.meeting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+}
+
+
+
+.meeting-id {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #bcadad;
+}
+
+.welcome-message {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.meeting-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.participants-container {
+    flex: 1;
+}
+
+.participants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    transition: all 0.3s;
+}
+
+.joining-message {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.toggle-button {
+    background-color: #1f90f9;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.toggle-button:hover {
+    background-color: #bbb;
+}
+
+
+.meeting-container.code-editor-active .main-content {
+    transform: translateX(27.5%); /* Move main content (participants) to the right */
+}
+
+.meeting-container.code-editor-active .code-editor-window {
+    transform: translateX(0%); /* Display code editor window */
+}

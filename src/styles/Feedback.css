@@ -1,0 +1,77 @@
+/* Basic styling for the feedback container */
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrally align items */
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, hsl(0, 0%, 84%), #000000);
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the main heading */
+.feedback-container h1 {
+  font-size: 3em;
+  color: #000000;
+  margin-bottom: 30px;
+  text-align: center; /* Center align heading */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the feedback message */
+.feedback-message {
+  color: #f5f5f5;
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 800px;
+  margin-bottom: 30px;
+  text-align: center; /* Center align text */
+  font-size: 1.3em; /* Ensuring uniform font size */
+  line-height: 1.8; /* Ensuring uniform line height */
+  font-family: 'Arial', sans-serif; /* Ensuring uniform font family */
+}
+
+/* Styling for the 'No feedback available' text */
+.no-feedback {
+  font-size: 1.3em;
+  color: #cccccc;
+  text-align: center; /* Center align text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the loading text */
+.loading-text {
+  font-size: 1.3em;
+  color: #cccccc;
+  text-align: center; /* Center align text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling similar to dashboard UI */
+.feedback-button,
+.logout-button {
+  background: black;
+  color: white;
+  border: 3px solid black;
+  transition: background 1s linear 0ms;
+  transition: color 500ms linear 0ms;
+  width: 500px;
+  padding: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.feedback-button:hover,
+.logout-button:hover {
+  color: #333;
+  background-color: white;
+}

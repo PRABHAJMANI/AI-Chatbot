@@ -1,0 +1,152 @@
+.register-main {
+  display: flex;
+  height: 100vh;
+}
+
+.register-left {
+  width: 50%; /* Adjust width to 50% */
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-right {
+  width: 50%; /* Adjust width to 50% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Add padding for better spacing */
+  background-color: white;
+}
+
+.register-form-container {
+  width: 100%;
+  max-width: 500px; /* Set a max-width for better responsiveness */
+  margin: 0 auto;
+  padding: 20px; /* Add padding for better spacing */
+  box-sizing: border-box;
+}
+
+.headers {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.headers h1 {
+  font-size: 20px; /* Reduced font size to fit heading */
+  margin: 0; /* Ensure no margin around heading */
+}
+
+.headers h3 {
+  font-weight: 400;
+  font-size: 16px; /* Reduced font size */
+  margin-bottom: 15px; /* Adjust margin-bottom for better spacing */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+.dob-input {
+  width: 100%;
+  padding: 12px; /* Adjust padding for better spacing */
+  margin-bottom: 12px; /* Adjust margin-bottom for better spacing */
+  border: 0px;
+  border-bottom: 1px solid black;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pass-input-div {
+  position: relative;
+}
+
+.pass-input-div svg {
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 35px;
+  cursor: pointer;
+  outline: none;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 16px; /* Adjust margin-top for better spacing */
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.register-center-buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.register-center-buttons button:nth-child(1) {
+  background: black;
+  color: white;
+  border: 3px solid black;
+  transition: background 1s linear 0ms;
+  transition: color 500ms linear 0ms;
+}
+
+.register-center-buttons button:nth-child(1):hover {
+  color: #333;
+  background-color: white;
+}
+
+.register-center-buttons button:nth-child(2) {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: black;
+  color: white;
+  border: 3px solid black;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.register-center-buttons button:nth-child(2):hover {
+  color: #333;
+  background-color: white;
+}
+
+.register-center-buttons button:nth-child(2) svg {
+  margin-right: 10px;
+}
+
+.register-bottom-p {
+  text-align: center;
+  font-size: 15px;
+  padding-bottom: 30px; /* Reduce padding-bottom for more spacing */
+  margin-top: 5px; /* Adjust margin-top for better spacing */
+}
+
+.register-bottom-p a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-bottom-p a:hover {
+  text-decoration: underline;
+}

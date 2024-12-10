@@ -1,0 +1,17 @@
+.participant-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+.participant-video {
+    width: 20vw;  /* Smaller size for video component */
+    height: 30vh;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none; /* Remove blue border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}

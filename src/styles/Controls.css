@@ -1,0 +1,28 @@
+.controls-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .control-button {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular shape */
+    padding: 10px;
+    width: 50px; /* Set width and height to make it circular */
+    height: 50px; /* Set width and height to make it circular */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 50px; /* Ensure buttons remain circular */
+    max-height: 50px; /* Ensure buttons remain circular */
+}
+
+.control-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+  

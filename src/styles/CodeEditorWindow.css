@@ -1,0 +1,68 @@
+.code-editor-window {
+    position: absolute;
+    left: 7.5%; /* Position slightly left of the screen */
+    top: 9%; /* Align to the top edge of the screen */
+    width: 40%; /* Adjusted width for the code editor */
+    height: 80%; /* Full height of the screen */
+    background: #1e1e1e;
+    border: 5px solid #000000; /* Blue border with 5px width */
+    border-radius: 20px; /* Rounded border radius for all edges */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.meeting-container.code-editor-active .participants {
+    transform: translateX(0); /* Adjust to keep participants visible */
+}
+
+.options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff6f6;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.options label {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.options select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.run-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.run-button:hover {
+    background-color: #0056b3;
+}
+
+.code-editor {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+    background: #282c34;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    resize: none;
+    border-bottom-left-radius: 20px; /* Rounded border radius for bottom-left corner */
+    border-bottom-right-radius: 20px; /* Rounded border radius for bottom-right corner */
+}
+
+

@@ -1,0 +1,577 @@
+.join-button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Add some padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Get the element to behave like a block element */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Add some margin */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .join-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+
+
+
+.whiteboard {
+    position: absolute;
+    left: 2.5%; /* Center the whiteboard horizontally */
+    top: 5%; /* Center the whiteboard vertically */
+    width: 75%; /* Maintaining the original width */
+    height: 90%; /* Maintaining the original height */
+    background: #2a2a2a; /* Darker, flatter background */
+    border: 1px solid #007BFF; /* Bright blue border for a tech feel */
+    border-radius: 8px; /* Moderate border radius for a sleek look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out; /* Smooth transitions for any layout or style changes */
+    overflow: hidden; /* Prevent overflow of inner content */
+}
+
+.whiteboard-tools {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333333; /* Dark grey for tool section, less distraction */
+    border-bottom: 2px solid #007BFF; /* Techy blue bottom border */
+}
+
+.whiteboard-canvas {
+    flex-grow: 1; /* Allow the canvas to fill the space */
+}
+
+.wb_input_color {
+    padding: 5px 10px; /* Reduce padding for a sharper input appearance */
+    border: 1px solid #007BFF; /* Techy blue border */
+    border-radius: 4px; /* Smaller border-radius for sharper edges */
+    background-color: transparent; /* Transparent background for input */
+    color: #FFFFFF; /* White color for visibility */
+}
+
+.wb_button {
+    background-color: #007BFF; /* Bright blue for a techy button look */
+    color: #FFFFFF; /* White text for contrast */
+    border: none; /* No border for a flat design */
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 4px; /* Sharp edges with minimal radius */
+}
+
+.wb_button:hover {
+    background-color: #0056b3; /* Darker blue on hover for interactive effect */
+    color: #E0E0E0; /* Light grey text on hover for visibility */
+}
+
+
+
+.code-editor-window {
+    position: absolute;
+    left: 0%;
+    top: 5%;
+    width: 75%;
+    height: 90%;
+    background: #f4f4f9;
+    border: 1px solid #007BFF; /* Techy blue border */
+    border-radius: 4px; /* Smaller border-radius for sharper edges */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.editor-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #abceff; /* Dark grey for tool section, less distraction */
+    
+    
+}
+
+.toolbar-item {
+    padding: 10px 15px; /* Adjust padding to match whiteboard button */
+    border-radius: 4px; /* Smaller border-radius for sharper edges */
+    border: none; /* No border for a flat design */
+    background-color: #007BFF; /* Bright blue for a techy button look */
+    color: #FFFFFF; /* White text for contrast */
+    font-size: 16px; /* Same font size as whiteboard button */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.toolbar-item:hover {
+    background-color: #0056b3; /* Darker blue on hover for interactive effect */
+    color: #E0E0E0; /* Light grey text on hover for visibility */
+}
+
+.editor {
+    flex-grow: 1; /* Allow the editor to fill the space */
+    padding: 10px;
+    background: #282c34;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow: hidden;
+}
+  .run-button {
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .run-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+.meeting-container.code-editor-active .participants {
+    transform: translateX(0); /* Adjust to keep participants visible */
+    
+}
+
+.options {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #2b2f3a, #23262e);
+    border-bottom: 2px solid #1f2128;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: inset 0 -4px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+.options label {
+    color: #cfd2d6;
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+
+.options select {
+    padding: 8px 16px;
+    border-radius: 5px;
+    background: #1e2129;
+    border: 1px solid #353946;
+    color: #ffffff;
+    margin-right: 20px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+    transition: all 0.3s ease;
+}
+
+.options select:hover, .options select:focus {
+    background: linear-gradient(145deg, #353946, #1e2129);
+    border-color: #5c5f6a;
+}
+
+
+.editor {
+    flex: 1;
+    padding: 20px;
+    background: #282c34; /* Darker background */
+    color: #ccc;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 15px;
+    resize: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+.controls-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .control-button {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular shape */
+    padding: 10px;
+    width: 50px; /* Set width and height to make it circular */
+    height: 50px; /* Set width and height to make it circular */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 50px; /* Ensure buttons remain circular */
+    max-height: 50px; /* Ensure buttons remain circular */
+}
+
+.control-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+/* MeetingView.css */
+.meeting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+
+
+.meeting-id {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #bcadad;
+}
+
+.welcome-message {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.meeting-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.participants-container {
+    flex: 1;
+
+}
+
+.participants {
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    transition: all 0.3s;
+}
+
+.joining-message {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.toggle-button {
+    background-color: #1f90f9;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.toggle-button:hover {
+    background-color: #bbb;
+}
+
+
+.meeting-container.code-editor-active .main-content {
+    transform: translateX(37%); /* Move main content (participants) to the right */
+}
+
+.meeting-container.code-editor-active .code-editor-window {
+    transform: translateX(-12%); /* Display code editor window */
+}
+.meeting-container.code-editor-active .whiteboard {
+    transform: translateX(-15%); /* Display code editor window */
+}
+
+
+
+.participant-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 65%; /* Adjust width as needed for layout */
+    min-width: 400px; /* Ensures it doesn't get too small */
+    background-color: none; /* Lighter background for better contrast */
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+
+.participant-video {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* Standard aspect ratio for videos */
+    border-radius: 8px; /* Consistent with the container's border-radius */
+    overflow: hidden; /* Ensures no overflow */
+    background-color: gray;
+}
+.meeting-container {
+    /* Container styles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .welcome-message {
+    /* Welcome message styles */
+    text-align: center;
+  }
+  
+  .meeting-content {
+    /* Content container styles */
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .participants {
+    /* Participants container styles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .participant-container {
+    /* Participant container styles */
+    margin: 10px;
+  }
+  
+  .ai-bot-participant {
+    /* Custom styles for AI bot participant */
+  }
+  
+  .code-editor-active .participants {
+    /* Styles when code editor is active */
+  }
+  
+  .join-button {
+    /* Join button styles */
+  }
+  
+  .joining-message {
+    /* Joining message styles */
+  }
+  
+  .controls {
+    /* Controls container styles */
+  }
+  
+
+
+
+/* Base container for the chat interface, hidden by default */
+.vall_chatContainer {
+    position: fixed;
+    top: 11%;
+    right: -100%; /* Start off-screen */
+    width: 35%; /* Adjust width as necessary */
+    height: 75%;
+    background-color: #ffffff;
+    color: white;
+    border-left: 1px solid #007bff;
+    z-index: 1001; /* Higher than other content but below modals/alerts if any */
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out;
+    overflow: hidden; /* Important to hide inner overflows */
+    border-radius: 10px;
+}
+
+/* Chat box within the container */
+
+/* Chat box within the container */
+.vall_chatBox {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input container for sending new messages */
+.vall_inputContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #333;
+}
+
+.vall_inputContainer textarea {
+    width: calc(100% - 90px); /* Adjusted to fit the button */
+    height: 50px;
+    margin-right: 10px;
+    padding: 10px;
+    resize: none;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #000000;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.vall_inputContainer .vall_button {
+    width: 80px;
+    padding: 5px 10px;
+}
+
+.vall_buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add gap between buttons */
+}
+
+.vall_button.active {
+    background-color: #007bff;;
+    color:#ffffff;
+}
+/* Send button in the input container */
+.vall_button {
+    width: 120px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+}
+
+.vall_button:hover {
+    background-color: #0072ed;
+    color: #ffffff;
+}
+
+.vall_message {
+    max-width: 70%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.vall_message.user {
+    background-color: #121412; /* Light green background for user messages */
+    align-self: flex-start; 
+    color: white;/* Align to the left */
+    border-bottom-left-radius: 0;
+}
+
+.vall_message.ai {
+    background-color: #abceff; /* Light blue background for AI messages */
+    align-self: flex-end; /* Align to the right */
+    border-bottom-right-radius: 0;
+    color:black;
+}
+
+/* Individual message styling */
+.vall_chatContainer.show {
+    right: 0; /* Bring the chat into view */
+}
+
+
+.meeting-container.showMessages .main-content {
+    transform: translateX(37%); /* Move main content (participants) to the right */
+}
+/* CSS file */
+/* CSS file */
+.participants {
+    position: relative;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+  }
+  
+  .participants.shift-left {
+    transform: translateX(-20%); /* Adjust the value as needed */
+  }
+  
+  
+  .meeting-content {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .message-container {
+    width: 30%;
+  }
+  
+  .code-editor-window {
+    flex: 1;
+  }
+  
+  .whiteboard-container {
+    flex: 1;
+  }
+  
+  .chat-open .participants {
+    width: 150%; /* Adjust width when chat is open */
+    height: auto; /* Adjust height if necessary */
+  }
+  .main-content.content-inactive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150%;
+    
+  }
+  
+  .main-content.content-inactive .participant-container {
+    width: 100%;
+  }
+  
+  
+  
+  .main-content.content-inactive .ai-bot-participant {
+    width: 100%; /* Bot participant takes full width */
+  }
+  
