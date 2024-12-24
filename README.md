@@ -1,7 +1,7 @@
 # AI Interview Bot
 Repository for AI Interviewing Agent
 
-## Getting Started
+### Getting Started
 
 To get a local copy up and running, follow these steps.
 
